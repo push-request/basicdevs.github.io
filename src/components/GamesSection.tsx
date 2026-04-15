@@ -1,31 +1,25 @@
 import game1 from "@/assets/game-1.jpg";
 import game2 from "@/assets/game-2.jpg";
 import game3 from "@/assets/game-3.jpg";
-import { ExternalLink } from "lucide-react";
 
 const games = [
-  { image: game1, title: "Adventure Quest", players: "12M+ Visits", genre: "Adventure" },
-  { image: game2, title: "Factory Empire", players: "22M+ Visits", genre: "Tycoon" },
-  { image: game3, title: "Pet World", players: "16M+ Visits", genre: "Simulator" },
+  { image: game1, title: "Adventure Quest", visits: "12M+ Visits" },
+  { image: game2, title: "Factory Empire", visits: "22M+ Visits" },
+  { image: game3, title: "Pet World", visits: "16M+ Visits" },
 ];
 
 const GamesSection = () => (
-  <section id="games" className="py-24 md:py-32 bg-secondary/20">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-          Our <span className="text-primary">Games</span>
-        </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
-          A growing portfolio of hit Roblox experiences loved by millions of players worldwide.
-        </p>
-      </div>
+  <section id="games" className="py-28 md:py-36">
+    <div className="container mx-auto px-6 text-center">
+      <h2 className="text-3xl md:text-5xl font-extrabold blue-underline mb-14">
+        Our Games
+      </h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {games.map((game) => (
           <div
             key={game.title}
-            className="group relative overflow-hidden rounded-xl border border-border gradient-card transition-all hover:border-primary/40"
+            className="glass-card overflow-hidden group cursor-pointer transition-all hover:border-primary/40"
           >
             <div className="aspect-square overflow-hidden">
               <img
@@ -34,18 +28,12 @@ const GamesSection = () => (
                 loading="lazy"
                 width={640}
                 height={640}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="font-heading text-lg font-semibold">{game.title}</h3>
-                <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-primary">{game.genre}</span>
-                <span>{game.players}</span>
-              </div>
+            <div className="p-5">
+              <h3 className="text-base font-bold mb-1">{game.title}</h3>
+              <p className="text-xs text-muted-foreground">{game.visits}</p>
             </div>
           </div>
         ))}
