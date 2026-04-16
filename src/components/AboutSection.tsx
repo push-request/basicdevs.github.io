@@ -13,7 +13,7 @@ const AboutSection = () => (
           invaluable insights along the way.
         </p>
         <a
-          href="#careers"
+          href="#contact"
           className="inline-block mt-8 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
         >
           Join our team
