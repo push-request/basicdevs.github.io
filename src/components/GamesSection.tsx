@@ -1,11 +1,13 @@
-import game1 from "@/assets/game-1.jpg";
-import game2 from "@/assets/game-2.jpg";
-import game3 from "@/assets/game-3.jpg";
+import towerTrollsYou from "@/assets/tower-trolls-you.png";
 
 const games = [
-  { image: game1, title: "Adventure Quest", visits: "12M+ Visits" },
-  { image: game2, title: "Factory Empire", visits: "22M+ Visits" },
-  { image: game3, title: "Pet World", visits: "16M+ Visits" },
+  {
+    image: towerTrollsYou,
+    title: "Tower Trolls You",
+    status: "In Active Development",
+    description:
+      "Our flagship title currently in early launch. We're scaling marketing investment as funding clears, with broader ad campaigns rolling out in the coming weeks.",
+  },
 ];
 
 const GamesSection = () => (
@@ -15,25 +17,30 @@ const GamesSection = () => (
         Our Games
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid sm:grid-cols-1 md:grid-cols-1 gap-6 max-w-md mx-auto">
         {games.map((game) => (
           <div
             key={game.title}
-            className="glass-card overflow-hidden group cursor-pointer transition-all hover:border-primary/40"
+            className="glass-card overflow-hidden group transition-all hover:border-primary/40 text-left"
           >
             <div className="aspect-square overflow-hidden">
               <img
                 src={game.image}
                 alt={game.title}
                 loading="lazy"
-                width={640}
-                height={640}
+                width={512}
+                height={512}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="p-5">
-              <h3 className="text-base font-bold mb-1">{game.title}</h3>
-              <p className="text-xs text-muted-foreground">{game.visits}</p>
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-lg font-bold">{game.title}</h3>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2 py-1 rounded-full">
+                  {game.status}
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">{game.description}</p>
             </div>
           </div>
         ))}
