@@ -1,11 +1,7 @@
 const footerLinks = {
-  Services: [
-    { label: "Game Acquisition", href: "#acquisition" },
-    { label: "Game Development", href: "#games" },
-  ],
   Company: [
     { label: "About us", href: "#about" },
-    { label: "Careers", href: "#careers" },
+    { label: "Careers", href: "#contact" },
     { label: "Contact", href: "#contact" },
   ],
   Legal: [
@@ -18,7 +14,7 @@ const Footer = () => (
   <footer>
     <div className="border-t border-border">
       <div className="container mx-auto px-6 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
           <div>
             <span className="text-lg font-bold text-foreground">Basic Devs</span>
           </div>
@@ -44,7 +40,7 @@ const Footer = () => (
       <div className="container mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
         <span>Basic Devs, Copyright {new Date().getFullYear()}</span>
         <div className="flex items-center gap-4">
-          <a href="#games" className="hover:text-foreground transition-colors">Games</a>
+          <a href="#about" className="hover:text-foreground transition-colors">About</a>
           <span>|</span>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </div>
