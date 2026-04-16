@@ -22,7 +22,7 @@ const AboutSection = () => (
             Join our team
           </a>
           <a
-            href="https://www.roblox.com/communities/35985418/"
+            href="https://www.roblox.com/communities/35985418/Basic-Devs#!/about"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Join our Roblox community"
