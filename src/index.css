@@ -48,6 +48,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border;
   }
@@ -63,5 +66,20 @@
   .blue-underline::after {
     content: '';
     @apply block w-12 h-1 bg-primary mx-auto mt-4 rounded-full;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  a, button {
+    transition: color 0.2s ease, background-color 0.2s ease,
+                border-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
   }
 }

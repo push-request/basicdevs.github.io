@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useReveal } from "@/hooks/use-reveal";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
@@ -34,10 +35,15 @@ const ContactSection = () => {
   const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
 
+  const { ref, visible } = useReveal();
+
   return (
     <section id="contact" className="py-28 md:py-36">
       <div className="container mx-auto px-6">
-        <div className="max-w-2xl mx-auto rounded-2xl bg-primary p-10 md:p-14">
+        <div
+          ref={ref}
+          className={`max-w-2xl mx-auto rounded-2xl bg-primary p-10 md:p-14 reveal ${visible ? "is-visible" : ""}`}
+        >
           <h2 className="text-2xl md:text-4xl font-extrabold text-primary-foreground text-center mb-2">
             Get In Touch
           </h2>
