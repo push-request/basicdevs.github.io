@@ -7,17 +7,38 @@ const AboutSection = () => (
 
       <div className="glass-card max-w-3xl mx-auto p-10 md:p-14">
         <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-          Our games have been played millions of times, attracting hundreds of
-          thousands of monthly active users across our portfolio. We've had the
-          privilege of working on some of the top ROBLOX games, gaining
-          invaluable insights along the way.
+          We are currently working on multiple games with a large amount of
+          funding. The estimated time of release for these games is the 20
+          <sup>th</sup> of April, 2026. Our only developer at the moment is
+          scriptedraf. He is the leader of all operations here at Basic Devs,
+          also providing the funding.
         </p>
-        <a
-          href="#contact"
-          className="inline-block mt-8 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
-        >
-          Join our team
-        </a>
+
+        <div className="mt-8 flex items-center justify-center gap-4">
+          <a
+            href="#contact"
+            className="inline-block rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
+          >
+            Join our team
+          </a>
+          <a
+            href="https://www.roblox.com/communities/35985418/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join our Roblox community"
+            className="inline-flex items-center justify-center h-12 w-12 rounded-xl border border-border bg-card text-foreground transition-all hover:bg-muted hover:brightness-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path d="M3.49 1.27 1.27 22.51 22.51 24.73 24.73 3.49 3.49 1.27Zm10.36 14.46-5.5-1.51 1.51-5.5 5.5 1.51-1.51 5.5Z" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
